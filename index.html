@@ -18,7 +18,18 @@
 <a class="skip" href="#main">Skip to content</a>
 <header class="nav" id="top">
   <a class="logo" href="#top" aria-label="RD / FDE, back to top">RD<span>/FDE</span></a>
-  <button class="burger" aria-expanded="false" aria-controls="menu" aria-label="Menu"><i></i><i></i></button>
+
+  <div class="nav-tools">
+  <button class="theme" id="theme" type="button" aria-label="Passer en mode sombre" aria-pressed="false">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true">
+      <mask id="moon-mask"><rect width="24" height="24" fill="#fff"/><circle class="cut" cx="24" cy="2" r="8" fill="#000"/></mask>
+      <circle class="core" cx="12" cy="12" r="5" fill="currentColor" stroke="none" mask="url(#moon-mask)"/>
+      <g class="rays"><path d="M12 1v2M12 21v2M4.2 4.2l1.4 1.4M18.4 18.4l1.4 1.4M1 12h2M21 12h2M4.2 19.8l1.4-1.4M18.4 5.6l1.4-1.4"/></g>
+    </svg>
+  </button>
+  <!-- ton bouton .burger ici, inchangé -->
+  </div>
+
   <nav id="menu" aria-label="Main">
     <a href="#about">About</a><a href="#capabilities">Capabilities</a><a href="#work">Selected Work</a><a href="#approach">Approach</a><a href="#contact">Contact</a>
     <a class="btn small" href="#contact">Discuss a Project</a>

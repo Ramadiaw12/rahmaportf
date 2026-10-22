@@ -142,10 +142,10 @@ if(matchMedia("(hover:hover)").matches){
 /* TEACH:JS:START */
 // Teaching: fill in what you want to show. Empty values stay hidden.
 const TEACHING = {
-  where: "",      // e.g. "University / bootcamp / company name"
-  audience: "",   // e.g. "Beginners and career changers"
-  topics: [],     // e.g. ["SQL", "Python & pandas", "Data governance"]
-  link: ""        // e.g. "https://..." (syllabus, profile, course page)
+  where: "school",
+  audience: "Beginners",
+  topics: ["Data"],
+  link: ""
 };
 (()=>{
   const el=document.getElementById("clinic"); if(!el) return;

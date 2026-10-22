@@ -1,0 +1,230 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Ramatoulaye Diawane — Forward Deployed Engineer, AI Solutions &amp; Software Integration</title>
+<meta name="description" content="Forward Deployed Engineer focused on AI solutions, API integration and deployment. I turn complex business problems into working software.">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Ramatoulaye Diawane — Forward Deployed Engineer">
+<meta property="og:description" content="AI solutions, software integration and real-world deployment.">
+<meta property="og:image" content="assets/images/og.png"><!-- TODO: add a 1200x630 preview image -->
+<link rel="icon" href="assets/icons/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500..800&family=DM+Sans:opsz,wght@9..40,400..700&family=JetBrains+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="nav" id="top">
+  <a class="logo" href="#top" aria-label="RD / FDE, back to top">RD<span>/FDE</span></a>
+
+  <div class="nav-tools">
+  <button class="theme" id="theme" type="button" aria-label="Passer en mode sombre" aria-pressed="false">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true">
+      <mask id="moon-mask"><rect width="24" height="24" fill="#fff"/><circle class="cut" cx="24" cy="2" r="8" fill="#000"/></mask>
+      <circle class="core" cx="12" cy="12" r="5" fill="currentColor" stroke="none" mask="url(#moon-mask)"/>
+      <g class="rays"><path d="M12 1v2M12 21v2M4.2 4.2l1.4 1.4M18.4 18.4l1.4 1.4M1 12h2M21 12h2M4.2 19.8l1.4-1.4M18.4 5.6l1.4-1.4"/></g>
+    </svg>
+  </button>
+  <!-- ton bouton .burger ici, inchangé -->
+  </div>
+
+  <nav id="menu" aria-label="Main">
+    <a href="#about">About</a><a href="#capabilities">Capabilities</a><a href="#work">Selected Work</a><a href="#approach">Approach</a><a href="#contact">Contact</a>
+    <a class="btn small" href="#contact">Discuss a Project</a>
+  </nav>
+</header>
+
+<main id="main">
+<section class="hero wrap">
+  <p class="mono" id="availability" hidden></p>
+  <h1>I turn complex business problems into working software.</h1>
+  <p class="lead">Forward Deployed Engineering at the intersection of AI, software integration and real-world deployment.</p>
+  <p class="sub">I design and integrate software and AI solutions around concrete needs: understand the problem, build, connect, deploy, improve.</p>
+  <div class="cta">
+    <a class="btn" href="#work">Explore my work</a>
+    <a class="btn ghost" href="#contact">Let's discuss a project</a>
+    <a class="link" href="https://github.com/Ramadiaw12" rel="noopener">GitHub</a>
+    <a class="link" data-linkedin href="#contact" rel="noopener">LinkedIn</a>
+  </div>
+  <figure class="flow" aria-label="System flow: data source to API to AI engine to business application">
+    <ol>
+      <li><b>Data source</b><span class="mono">documents, DB, forms</span></li>
+      <li><b>API layer</b><span class="mono">FastAPI, validation</span></li>
+      <li><b>AI engine</b><span class="mono">LLM, retrieval</span></li>
+      <li><b>Business app</b><span class="mono">review, decision</span></li>
+    </ol>
+  </figure>
+</section>
+
+<section class="wrap" id="capabilities">
+  <h2>Problems I can help solve</h2>
+  <p class="note mono">Built = shipped in a project. Exploring = what I'm developing. Update these tags as your work grows.</p>
+  <div class="grid4">
+    <article><h3>AI Solutions &amp; Agents</h3>
+      <dl><dt>Problem</dt><dd>Teams repeat document-heavy tasks by hand.</dd>
+      <dt>Solution</dt><dd>LLM-powered assistants and agent workflows with human review.</dd>
+      <dt>Tools</dt><dd class="mono">Python, LLM APIs</dd>
+      <dt>Outcome</dt><dd>Less manual drafting, traceable outputs.</dd></dl>
+      <span class="tag built">Built</span></article>
+    <article><h3>Software &amp; API Integration</h3>
+      <dl><dt>Problem</dt><dd>Systems don't talk to each other.</dd>
+      <dt>Solution</dt><dd>Backend APIs and connectors that move data reliably.</dd>
+      <dt>Tools</dt><dd class="mono">FastAPI, REST</dd>
+      <dt>Outcome</dt><dd>One consistent flow of data.</dd></dl>
+      <span class="tag built">Built</span></article>
+    <article><h3>Data &amp; Knowledge Systems</h3>
+      <dl><dt>Problem</dt><dd>Knowledge is scattered and hard to query.</dd>
+      <dt>Solution</dt><dd>Structured storage and retrieval pipelines (RAG).</dd>
+      <dt>Tools</dt><dd class="mono">PostgreSQL, pgvector</dd>
+      <dt>Outcome</dt><dd>Answers grounded in the company's own sources.</dd></dl>
+      <span class="tag explore">Exploring</span></article>
+    <article><h3>Deployment &amp; Implementation</h3>
+      <dl><dt>Problem</dt><dd>Prototypes that never reach production.</dd>
+      <dt>Solution</dt><dd>Containerised services with documented setup.</dd>
+      <dt>Tools</dt><dd class="mono">Docker, Compose, Linux</dd>
+      <dt>Outcome</dt><dd>Repeatable deployment, clear runbooks.</dd></dl>
+      <span class="tag built">Built</span></article>
+  </div>
+</section>
+
+<section class="wrap" id="work">
+  <h2>Selected work</h2>
+  <p class="note mono">Case studies. Fields marked “To complete” are intentionally empty until you add real facts.</p>
+  <ol class="cases">
+    <li><button data-case="a"><span class="mono">Case A</span><h3>Intelligent Business Workflow</h3><p>AI automation of a business process, from intake to validated output.</p></button></li>
+    <li><button data-case="b"><span class="mono">Case B</span><h3>AI Assistant &amp; RAG</h3><p>Answers drawn from a knowledge base, with known limits stated.</p></button></li>
+    <li><button data-case="c"><span class="mono">Case C</span><h3>API Integration &amp; Deployment</h3><p>Backend services connected, containerised and documented.</p></button></li>
+  </ol>
+</section>
+
+<dialog id="case" aria-labelledby="case-title"><form method="dialog"><button class="close" aria-label="Close">Close</button></form><div id="case-body"></div></dialog>
+
+<section class="wrap" id="approach">
+  <h2>Engineering approach</h2>
+  <p class="lead2">Useful, testable and maintainable beats impressive and unusable.</p>
+  <ol class="steps">
+    <li><b>Discover</b>Understand the need, users, constraints and how work happens today.</li>
+    <li><b>Design</b>Define architecture, integrations, data model and success criteria.</li>
+    <li><b>Build &amp; Integrate</b>Develop components, connect services, test interactions, handle errors.</li>
+    <li><b>Deploy &amp; Improve</b>Ship, document, check reliability, iterate on feedback.</li>
+  </ol>
+</section>
+
+<section class="wrap" id="stack">
+  <h2>Technical stack</h2>
+  <div class="stack">
+    <div><h3>Languages &amp; backend</h3><p>Python <em>used in projects</em> · SQL <em>used in projects</em> · JavaScript <em>used in projects</em></p></div>
+    <div><h3>APIs &amp; services</h3><p>FastAPI <em>used in projects</em> · REST integrations <em>used in projects</em></p></div>
+    <div><h3>AI engineering</h3><p>LLM APIs <em>used in projects</em> · Agents <em>used in projects</em> · RAG, embeddings <em>exploring</em></p></div>
+    <div><h3>Data</h3><p>PostgreSQL <em>working knowledge</em> · pgvector <em>exploring</em></p></div>
+    <div><h3>Infrastructure</h3><p>Docker, Compose <em>used in projects</em> · Linux <em>used in projects</em></p></div>
+    <div><h3>Engineering tools</h3><p>Git, GitHub <em>used in projects</em> · Tests, documentation <em>working knowledge</em></p></div>
+  </div>
+  <p class="note mono">Levels are my own placeholders. Adjust each to what you can honestly defend in an interview.</p>
+</section>
+
+<section class="wrap dark" id="lab">
+  <h2>Technical lab</h2>
+  <p class="lead2">Small, runnable examples that show how I reason.</p>
+  <div class="lab">
+    <article><h3>Validate input at the boundary</h3>
+<pre><code>from fastapi import FastAPI
+from pydantic import BaseModel, Field
+
+app = FastAPI()
+
+class Query(BaseModel):
+    question: str = Field(min_length=3, max_length=500)
+
+@app.post("/ask")
+def ask(q: Query):
+    return {"received": q.question}</code></pre>
+      <p><b>Why:</b> bad input is rejected with a clear 422 before it reaches the model or database. <b>Limit:</b> validates shape, not meaning.</p></article>
+    <article><h3>Services in Docker Compose</h3>
+<pre><code>services:
+  api:
+    build: .
+    ports: ["8000:8000"]
+    depends_on:
+      db: { condition: service_healthy }
+  db:
+    image: postgres:16
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U postgres"]
+      interval: 5s</code></pre>
+      <p><b>Why:</b> the API starts only once the database is ready. <b>Limit:</b> add credentials via an env file, never in the repo.</p></article>
+    <article><h3>Decision: when to use RAG</h3>
+      <p><b>Choice:</b> retrieval over fine-tuning when answers must cite changing company documents.</p>
+      <p><b>Trade-off:</b> retrieval quality now depends on chunking and indexing; answers need source links so users can verify them.</p></article>
+  </div>
+</section>
+
+<section class="wrap" id="about">
+  <h2>About</h2>
+  <div class="about">
+    <div class="photo" role="img" aria-label="Placeholder for a professional photo of Ramatoulaye Diawane"><span class="mono">Photo to add</span></div>
+    <div>
+      <p>I'm a final-year computer science and AI engineering student. I'm drawn to the point where a business need meets AI, software and infrastructure, and I like to test ideas quickly, then ship them.</p>
+      <p>My work centres on backend services, API integration, agent workflows and deployment. I document the decisions I make so others can maintain what I build.</p>
+      <p>I'm open to international teams and remote collaboration.</p>
+    </div>
+  </div>
+</section>
+
+<section class="wrap" id="principles">
+  <h2>Principles</h2>
+  <ul class="principles">
+    <li><b>Understand before building.</b> Define the problem first.</li>
+    <li><b>Integrate, don't isolate.</b> Fit the tools people already use.</li>
+    <li><b>Test assumptions early.</b> Cheap experiments beat late surprises.</li>
+    <li><b>Design for real constraints.</b> Data, budget, latency, people.</li>
+    <li><b>Document decisions.</b> Future maintainers need the why.</li>
+    <li><b>Measure what matters.</b> Pick the metric before the feature.</li>
+  </ul>
+</section>
+
+<section class="wrap contact" id="contact">
+  <h2>Have a problem worth solving?</h2>
+  <p class="lead2">If you're looking for someone to help turn an AI idea, a complex workflow or an integration challenge into a working solution, let's talk.</p>
+  <div class="cta"><a class="btn" href="mailto:rdiawane2001@gmail.com">Email me</a>
+    <a class="link" data-linkedin href="#contact" rel="noopener">LinkedIn</a><a class="link" href="https://github.com/Ramadiaw12" rel="noopener">GitHub</a></div>
+  <form id="form" class="contact" novalidate>
+  <div class="field">
+    <input id="f-name" name="name" type="text" placeholder=" " autocomplete="name" required>
+    <label for="f-name">Your name</label>
+  </div>
+  <div class="field">
+    <input id="f-email" name="email" type="email" placeholder=" " autocomplete="email" required>
+    <label for="f-email">Email address</label>
+  </div>
+  <div class="field full">
+    <input id="f-subject" name="subject" type="text" placeholder=" " required>
+    <label for="f-subject">Subject</label>
+  </div>
+  <div class="field full">
+    <textarea id="f-msg" name="msg" rows="5" maxlength="1000" placeholder=" " required></textarea>
+    <label for="f-msg">Your message</label>
+    <span class="count" aria-hidden="true">0 / 1000</span>
+  </div>
+  <div class="form-foot">
+    <button class="send" type="submit">
+      <span>Send message</span>
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+    </button>
+    <p class="hint">Opens your email app with the message ready to send.</p>
+  </div>
+  <p class="status" id="status" role="status"></p>
+</form>
+</section>
+</main>
+
+<footer class="wrap foot">
+  <div><b>Rahma</b><br><span class="mono">Forward Deployed Engineer | AI Solutions &amp; Software Integration</span></div>
+  <nav aria-label="Footer"><a href="#about">About</a><a href="#work">Work</a><a href="#contact">Contact</a><a href="https://github.com/Ramadiaw12" rel="noopener">GitHub</a><a data-linkedin href="#contact" rel="noopener">LinkedIn</a><a href="#top">Back to top</a></nav>
+  <p class="mono">© <span id="year"></span> rhng</p>
+</footer>
+<script src="js/main.js"></script>
+</body>
+</html>

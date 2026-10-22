@@ -11,7 +11,7 @@
 <meta property="og:image" content="assets/images/og.png"><!-- TODO: add a 1200x630 preview image -->
 <link rel="icon" href="assets/icons/favicon.svg" type="image/svg+xml">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,700&family=IBM+Plex+Sans:wght@400;500&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500..800&family=DM+Sans:opsz,wght@9..40,400..700&family=JetBrains+Mono:wght@400;500&display=swap">
 <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
@@ -31,7 +31,8 @@
   </div>
 
   <nav id="menu" aria-label="Main">
-    <a href="#about">About</a><a href="#capabilities">Capabilities</a><a href="#work">Selected Work</a><a href="#approach">Approach</a><a href="#contact">Contact</a>
+    <a href="#about">About</a><a href="#capabilities">Capabilities</a><a href="#work">Selected Work</a><a href="#approach">Approach</a><a href="#teaching" data-nav="teaching">Teaching</a>
+<a href="#contact">Contact</a>
     <a class="btn small" href="#contact">Discuss a Project</a>
   </nav>
 </header>
@@ -40,6 +41,7 @@
 <section class="hero wrap">
   <p class="mono" id="availability" hidden></p>
   <h1>I turn complex business problems into working software.</h1>
+<a class="roles" href="#teaching"><span>Deploys AI systems</span><b aria-hidden="true">&rarr;</b><span>Teaches data</span></a>
   <p class="lead">Forward Deployed Engineering at the intersection of AI, software integration and real-world deployment.</p>
   <p class="sub">I design and integrate software and AI solutions around concrete needs: understand the problem, build, connect, deploy, improve.</p>
   <div class="cta">
@@ -185,26 +187,74 @@ def ask(q: Query):
   </ul>
 </section>
 
+<section id="teaching" class="wrap">
+  <p class="mono">Teaching</p>
+  <h2>I teach what I deploy.</h2>
+  <p class="lead2">I am a data instructor. Explaining a messy dataset to a room of learners trains the same muscle as explaining a system to a client's team: make it clear, show where it breaks, then fix it in front of them. Try a lesson below.</p>
+  <div class="teach-facts" id="teach-facts" hidden></div>
+  <div class="clinic" id="clinic" aria-label="Interactive data cleaning lesson">
+    <div class="clinic-head">
+      <span class="mono">Live lesson &middot; dirty data, step by step</span>
+      <span class="mono" id="cl-count">5 rows</span>
+    </div>
+    <div class="clinic-body">
+      <div class="cl-left">
+        <div class="cl-table" id="cl-table"></div>
+        <p class="cl-note" id="cl-note" aria-live="polite"></p>
+      </div>
+      <div class="cl-right">
+        <h3>Revenue by city</h3>
+        <div class="cl-chart" id="cl-chart"></div>
+        <pre class="cl-code" id="cl-code" aria-label="pandas code"></pre>
+      </div>
+    </div>
+    <div class="clinic-ctrl">
+      <button type="button" class="btn ghost small" id="cl-prev">Back</button>
+      <div class="cl-dots" id="cl-dots" role="group" aria-label="Lesson steps"></div>
+      <button type="button" class="btn small" id="cl-next">Apply next fix</button>
+    </div>
+  </div>
+</section>
+
 <section class="wrap contact" id="contact">
   <h2>Have a problem worth solving?</h2>
   <p class="lead2">If you're looking for someone to help turn an AI idea, a complex workflow or an integration challenge into a working solution, let's talk.</p>
   <div class="cta"><a class="btn" href="mailto:rdiawane2001@gmail.com">Email me</a>
     <a class="link" data-linkedin href="#contact" rel="noopener">LinkedIn</a><a class="link" href="https://github.com/Ramadiaw12" rel="noopener">GitHub</a></div>
-  <form id="form" novalidate>
-    <label>Name<input name="name" required autocomplete="name"></label>
-    <label>Email<input name="email" type="email" required autocomplete="email"></label>
-    <label>Subject<input name="subject" required></label>
-    <label>What do you need?<textarea name="msg" rows="5" required></textarea></label>
-    <button class="btn" type="submit">Open in my email app</button>
-    <p class="status" id="status" role="status"></p>
-  </form>
+  <form id="form" class="contact" novalidate>
+  <div class="field">
+    <input id="f-name" name="name" type="text" placeholder=" " autocomplete="name" required>
+    <label for="f-name">Your name</label>
+  </div>
+  <div class="field">
+    <input id="f-email" name="email" type="email" placeholder=" " autocomplete="email" required>
+    <label for="f-email">Email address</label>
+  </div>
+  <div class="field full">
+    <input id="f-subject" name="subject" type="text" placeholder=" " required>
+    <label for="f-subject">Subject</label>
+  </div>
+  <div class="field full">
+    <textarea id="f-msg" name="msg" rows="5" maxlength="1000" placeholder=" " required></textarea>
+    <label for="f-msg">Your message</label>
+    <span class="count" aria-hidden="true">0 / 1000</span>
+  </div>
+  <div class="form-foot">
+    <button class="send" type="submit">
+      <span>Send message</span>
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+    </button>
+    <p class="hint">Opens your email app with the message ready to send.</p>
+  </div>
+  <p class="status" id="status" role="status"></p>
+</form>
 </section>
 </main>
 
 <footer class="wrap foot">
-  <div><b>Ramatoulaye Diawane</b><br><span class="mono">Forward Deployed Engineer | AI Solutions &amp; Software Integration</span></div>
+  <div><b>Rahma</b><br><span class="mono">Forward Deployed Engineer | AI Solutions &amp; Software Integration</span></div>
   <nav aria-label="Footer"><a href="#about">About</a><a href="#work">Work</a><a href="#contact">Contact</a><a href="https://github.com/Ramadiaw12" rel="noopener">GitHub</a><a data-linkedin href="#contact" rel="noopener">LinkedIn</a><a href="#top">Back to top</a></nav>
-  <p class="mono">© <span id="year"></span> Ramatoulaye Diawane</p>
+  <p class="mono">© <span id="year"></span> rhng</p>
 </footer>
 <script src="js/main.js"></script>
 </body>

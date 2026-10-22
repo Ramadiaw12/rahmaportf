@@ -59,3 +59,52 @@ input,textarea{font:inherit;padding:.7rem;border:1px solid var(--ink);background
 .flow ol{grid-template-columns:1fr}.flow li:not(:last-child)::after{right:auto;left:1.5rem;top:auto;bottom:-1px;transform:translate(0,50%)}@keyframes pulse{50%{transform:translate(0,50%) scale(1.6);opacity:.5}}
 .cases button{grid-template-columns:1fr}.cases .mono{grid-row:auto}}
 @media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important;scroll-behavior:auto!important}}
+
+/* Tablette : 2 colonnes au lieu de passer direct à 1 */
+@media (min-width:600px) and (max-width:860px){
+  .stack,.lab{grid-template-columns:repeat(2,1fr)}
+  .principles{grid-template-columns:repeat(2,1fr)}
+  .steps{grid-template-columns:repeat(2,1fr)}
+}
+/* Très grands écrans */
+@media (min-width:1600px){html{font-size:112.5%}.wrap{width:min(1320px,100% - 4rem)}}
+/* Tactile : zones de clic confortables */
+@media (pointer:coarse){.btn,.link,#menu a,.foot a{min-height:44px;display:inline-flex;align-items:center}}
+/* Petits écrans */
+@media (max-width:420px){.wrap{padding-block:3.5rem}dialog{padding:1.25rem}.cta .btn{width:100%;text-align:center}}
+img,svg,pre{max-width:100%}
+
+
+
+/* Barre de lecture */
+.progress{position:fixed;top:0;left:0;height:3px;width:0;background:var(--cu);z-index:30}
+
+/* Grain léger sur le fond */
+body::before{content:"";position:fixed;inset:0;pointer-events:none;opacity:.05;z-index:-1;
+background-image:radial-gradient(var(--ink) 1px,transparent 1px);background-size:22px 22px}
+
+/* Lien actif dans le menu */
+#menu a.active:not(.btn){color:var(--cu);text-decoration:underline;text-underline-offset:6px}
+
+@media (prefers-reduced-motion:no-preference){
+  /* Entrée du hero, une seule séquence */
+  .hero>*{opacity:0;transform:translateY(18px);animation:rise .8s cubic-bezier(.2,.7,.2,1) forwards}
+  .hero>:nth-child(2){animation-delay:.1s}.hero>:nth-child(3){animation-delay:.3s}
+  .hero>:nth-child(4){animation-delay:.45s}.hero>:nth-child(5){animation-delay:.6s}.hero>:nth-child(6){animation-delay:.8s}
+  @keyframes rise{to{opacity:1;transform:none}}
+
+  /* Apparition au scroll */
+  .js .reveal{opacity:0;transform:translateY(24px);transition:opacity .7s,transform .7s}
+  .js .reveal.in{opacity:1;transform:none}
+
+  /* Les étapes s'allument */
+  .steps li{border-top-color:var(--line);transition:border-color .5s .15s}
+  .steps.in li{border-top-color:var(--ink)}
+  .steps li:nth-child(2){transition-delay:.35s}.steps li:nth-child(3){transition-delay:.55s}.steps li:nth-child(4){transition-delay:.75s}
+
+  /* Petit mouvement sur les cartes de domaines */
+  .grid4 article{transition:background .25s,transform .25s}
+  .grid4 article:hover{background:#efe8d8;transform:translateY(-3px)}
+  dialog[open]{animation:pop .3s ease}
+  @keyframes pop{from{opacity:0;transform:translateY(12px) scale(.98)}}
+}

@@ -48,3 +48,28 @@ form.addEventListener("submit",e=>{
   location.href=`mailto:${CONFIG.email}?subject=${encodeURIComponent(d.subject)}&body=${encodeURIComponent(d.msg+"\n\n"+d.name+" ("+d.email+")")}`;
   status.textContent="Your email app should open with the message ready to send. If not, write to "+CONFIG.email+".";
 });
+
+
+document.documentElement.classList.add("js");
+
+// Barre de lecture
+const bar=document.createElement("div");bar.className="progress";document.body.prepend(bar);
+addEventListener("scroll",()=>{
+  const h=document.documentElement;
+  bar.style.width=(h.scrollTop/(h.scrollHeight-h.clientHeight)*100)+"%";
+},{passive:true});
+
+// Apparition au scroll
+const io=new IntersectionObserver(es=>es.forEach(e=>{
+  if(e.isIntersecting){e.target.classList.add("in");io.unobserve(e.target)}
+}),{threshold:.15});
+document.querySelectorAll(".wrap:not(.hero),.steps,.cases li").forEach(el=>{
+  el.classList.add("reveal");io.observe(el);
+});
+
+// Lien actif du menu
+const links=[...document.querySelectorAll("#menu a[href^='#']:not(.btn)")];
+const so=new IntersectionObserver(es=>es.forEach(e=>{
+  if(e.isIntersecting)links.forEach(a=>a.classList.toggle("active",a.getAttribute("href")==="#"+e.target.id));
+}),{rootMargin:"-45% 0px -50% 0px"});
+document.querySelectorAll("main section[id]").forEach(s=>so.observe(s));
